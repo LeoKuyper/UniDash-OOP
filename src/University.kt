@@ -33,10 +33,16 @@ class University(private var name: String) {
                 return subjects.size.toString()
         }
 
-        fun addSubjects(){
-
+        fun addSubjects(name: String, code: String, credits: Int, hours: Int, price: Int){
+                subjects.add(Subject(name, code, credits, hours, price))
         }
 
+        fun listSubjects(){
+                println("Subjects available: ")
+                subjects.forEach(){
+                        println(it.name + " " + it.code + " R" +it.price)
+                }
+        }
 
         //Pool
         fun getPool(): String{

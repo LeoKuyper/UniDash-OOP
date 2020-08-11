@@ -1,6 +1,6 @@
 class Person(val id: Int, var name: String, var type: Int) {
-    var subjects = mutableListOf<Subject>()
-    var money = 0f
+    private var subjects = mutableListOf<Subject>()
+    private var money = 0f
 
     fun changeName(string: String){
         name = string
@@ -21,7 +21,11 @@ class Person(val id: Int, var name: String, var type: Int) {
         return type.toString()
     }
 
-    fun getMoney(){
+    fun getMoneyAmount(): Float{
+        return money
+    }
 
+    fun addSubjects(){
+        
     }
 }
